@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Slab&family=Sevillana&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bgcolor: #e0e0e0;
+    --borderColor: #A28B55;
+}
+
+body {
+    width: 100vw;
+    font-family: "Poppins", system-ui;
+    color: var(--borderColor);
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.CompanyName {
+    padding: 0 0 0 .1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.Nav {
+    width: 100vw;
+    height: 3rem;
+    position: sticky;
+    top: 0;
+    background-color: var(--bgcolor);
+}
+
+.Nav, .sec-1, .sec-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sec-1 img {
+    margin-left: 1rem;
+    height: 2.8rem;
+}
+
+.sec-1 .CompanyName {
+    padding-left: .5rem;
+    font-size: 1.6rem;
+}
+
+.sec-2 ul {
+    padding-right: 1rem;
+}
+
+.navbar li {
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar li:hover {
+    color: #5A5A5A; /* A darker shade for hover effect */
+}
+
+.sec-2 {
+    position: absolute;
+    right: 0;
+}
+
+.name {
+    margin: .7rem;
+}
+
+.text {
+    margin: .3rem;
+}
+
+li {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.image-1 {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin: .5rem;
+}
+
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.section {
+    /* min-height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-1, .section-6 {
+    margin: 0; /* or margin: 0.5rem 0; if you want to reduce it instead of removing */
+}
+#section1, #section2, #section3, #section4, #section5, #section6 {
+    background-color: var(--bgcolor);
+}
+
+.section-1, .section-2, .section-3, .section-4, .section-5, .section-6 {
+    width: 75%;
+    margin: 1rem 0;
+    padding: 1.9rem;
+    font-size: 1rem;
+    /* border: 1px dotted var(--borderColor); */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, .30);
+}
+
+.heading {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.inner {
+    font-size: 1.3rem;
+    font-weight: 450;
+}
+
+.text {
+    padding: .5rem 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 350;
+    text-align: justify;
+}
+
+.section-6{
+    width: 20%;
+    height: 47%;
+    text-align: center;
+}
+
+.image-2{
+    width: 10rem;
+    height: 13rem;
+    border-radius: .5rem;
+}
+
+.img{
+    width: 2.2rem;
+    height: 2.2rem;
+    object-fit: cover;
+}
+
+.icons{
+    margin: 1rem 0;
+}
+
+.icons, .card{
+    text-align: center;
+}
+
+.new-bar{
+    margin: 0.5rem;
+}
+
+.unique{
+    text-align: center;
+}
+
+.line{
+    margin: 1rem 0;
+    border: 5px solid var(--borderColor);
+    border-radius: .2rem;
+}
+
+a{
+    color: #A28B55;
+    text-decoration: none;
+}
+
+a:active, a:visited{
+    color: #A28B55;
+}
+
+/* Media Queries */
+
+/* Mobile screens (up to 768px) */
+@media (max-width: 767px) {
+
+    .Nav {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .sec-2 {
+        position: static;
+    }
+
+    .navbar {
+        display: none;
+        /* display: flex;
+        flex-direction: column;
+        align-items: flex-start; */
+    }
+
+    .name {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .CompanyName {
+        font-size: 1.5rem;
+    }
+
+    .image-1 {
+        width: 2.5rem;
+        height: 1.8rem;
+    }
+
+.section{
+    margin: 0;
+}
+    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6 {
+        width: 90%;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .section-6 {
+        width: 70%;
+    }
+
+    .text{
+        font-size: .9rem;
+    }
+
+    .inner{
+        font-size: 1rem;
+    }
+
+    .heading {
+        font-size: 1.2rem;
+    }
+
+    .img{
+        width: 1.2rem;
+        height: 1.2rem;
+        object-fit: cover;
+    }
+
+}
+
+/* Tablet screens (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    body{
+        overflow: hidden;
+    }
+
+    .sec-2 {
+        position: absolute;
+        right: .3rem;
+    }
+
+    .navbar {
+        flex-direction: row;
+    }
+
+    .name {
+        margin: 0.3rem;
+        font-size: 1.1rem;
+    }
+
+    .CompanyName {
+        font-size: 1.6rem;
+    }
+
+    .image-1 {
+        width: 2.8rem;
+        height: 2rem;
+    }
+
+    .section{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+        transition: background-color 0.7s ease-in;
+    }
+
+    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6 {
+        width: 80%;
+        padding: 1.7rem;
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+
+    .img{
+        width: 1.7rem;
+        height: 1.7rem;
+        object-fit: cover;
+    }
+
+    .heading {
+        font-size: 1.25rem;
+    }
+
+    .line{
+        width: 90%;
+        margin: 1rem 0;
+        border: 5px solid var(--borderColor);
+        border-radius: .2rem;
+    }
+    
+    .section-6 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+@media (min-width: 1280px) and (max-height: 800px){
+
+    .section{
+        margin: 0;
+    }
+
+    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6 {
+        width: 80%;
+        padding: 1.7rem;
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+
+
+}
+
+/* Large desktop screens (above 1024px) */
+@media (min-width: 1025px) {
+    body{
+        overflow: hidden;
+    }
+    .name {
+        font-size: 1.2rem;
+    }
+
+    .CompanyName {
+        font-size: 1.8rem;
+    }
+
+    .image-1 {
+        width: 3.2rem;
+        height: 2.2rem;
+    }
+    
+    .section{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+        transition: background-color 0.7s ease-in;
+    }
+    
+    .section-1, .section-2, .section-3, .section-4, .section-5, .section-6 {
+        width: 75%;
+        padding: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .line{
+        width: 90%;
+        margin: 1rem 0;
+        border: 5px solid var(--borderColor);
+        border-radius: .2rem;
+    }
+    
+    .section-6 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heading {
+        font-size: 1.4rem;
+    }
+    
+}
